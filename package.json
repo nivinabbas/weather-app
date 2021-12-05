@@ -1,0 +1,29 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nivinabbas/weather-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nivinabbas/weather-app/issues"
+  },
+  "homepage": "https://github.com/nivinabbas/weather-app#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "handlebars": "^4.7.7",
+    "jquery": "^3.6.0",
+    "mongoose": "^6.0.14",
+    "urllib": "^2.38.0"
+  }
+}
