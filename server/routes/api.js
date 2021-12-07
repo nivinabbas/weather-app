@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-// const moment = require('moment');
 const mongoose = require('mongoose');
 const City = require('../model/City');
 const urllib = require('urllib');
