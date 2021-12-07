@@ -18,16 +18,8 @@ class dataOfCity {
 
   deleteDataAboutCity = async function (cityToDelete) {
     console.log(cityToDelete);
-    // await axios.delete(`/city/${cityToDelete}`);
-    $.ajax({
-      method:'delete',
-      url:`city/${cityToDelete}`,
-      data:{
-        name:cityToDelete
-      }
-      
-    }
-   )
+    await axios.delete(`/city/${cityToDelete}`);
+  
   };
 
   getData = function () {
