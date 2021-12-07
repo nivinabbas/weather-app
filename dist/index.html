@@ -13,19 +13,19 @@
       <input
         type="text"
         placeholder="please enter city"
-        class="inputTeamName"
+        class="inputCityName"
       />
-      <button class="getTeamName">GET ROSTER</button>
+      <button class="getCityName">Search City</button>
     </div>
-    <div class="teamData"></div>
+    <div class="cityData"></div>
 
-    <div class="teamCard"></div>
+    <div class="cityCard"></div>
 
-    <script id="players-template" type="text/x-handlebars-template">
-      <div class='teamData'>
+    <script id="cities-template" type="text/x-handlebars-template">
+      <div class='cityData'>
         {{#each citiesData}}
 
-          <div class='playerCard'>
+          <div class='cityDetailCard'>
             <p class='name'>{{name}}</p>
             <p class='condition'>{{condition}}</p>
             <div class='icon'>

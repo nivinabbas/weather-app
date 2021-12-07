@@ -1,17 +1,17 @@
-var source = $('#players-template').html();
+var source = $('#cities-template').html();
 var template = Handlebars.compile(source);
 
 
 class Renderer {
-  // constructor(data) {
-  //   this.data = data;
-  // }
+  constructor() {
+    
+  }
 
   renderData(data) {
     const citiesData = { "citiesData": data };
  
-    $('.teamCard').empty();
+    $('.cityCard').empty();
     let addToHTML = template(citiesData);
-    $('.teamCard').append(addToHTML);
+    $('.cityCard').append(addToHTML);
   }
 }
