@@ -16,7 +16,7 @@ $('.getCityName').on('click', async function () {
 
 $('body').on('click', '.saveButton', async function () {
   let addCityName = $(this).closest('.cityDetailCard').find('.name')[0].innerHTML;
-  console.log(addCityName);
+
   let addCityTemperature = $(this)
     .closest('.cityDetailCard')
     .find('.temperature')[0].innerHTML;
@@ -26,7 +26,7 @@ $('body').on('click', '.saveButton', async function () {
   let addCityConditionIcon = $(this)
     .closest('.cityDetailCard')
     .find('.photoCard')[0].src;
-  console.log(addCityCondition);
+ 
   let cityModel = {
     name: addCityName,
     temperature: addCityTemperature,
