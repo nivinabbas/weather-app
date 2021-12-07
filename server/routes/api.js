@@ -13,7 +13,8 @@ let city;
 router.get('/city/:cityName', function (request, response) {
   let cityName = request.params.cityName;
   urllib.request(
-    `api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`,
+    `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&&units=metric&appid=${API_KEY}`,
+  
     function (req, res) {
       let cityData = JSON.parse(res);
 
@@ -44,7 +45,6 @@ router.post('/city', function (request, res) {
   });
 
   addCity.save().then((city) => {
-    console.log(`The name of city is : ${city.name} ${city.temperature}`);
   });
   res.send(addCity);
 });
