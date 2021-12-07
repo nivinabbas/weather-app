@@ -17,11 +17,12 @@ router.get('/city/:cityName', function (request, response) {
     `api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`,
     function (req, res) {
       let cityData = JSON.parse(res);
+
       city = new City({
         name: cityName,
         temperature: cityData.main.temp,
-        condition: cityData.weather[0].main,
         conditionIcon: `http://openweathermap.org/img/wn/${cityData.weather[0].icon}@2x.png`,
+        condition: cityData.weather[0].main,
       });
 
       response.send(city);
@@ -42,6 +43,7 @@ router.post('/city', function (request, res) {
     condition: request.body.condition,
     conditionIcon: request.body.conditionIcon,
   });
+
   addCity.save().then((city) => {
     console.log(`The name of city is : ${city.name} ${city.temperature}`);
   });
@@ -50,9 +52,11 @@ router.post('/city', function (request, res) {
 
 router.delete('/city/:cityName', function (request, response) {
   let cityName = request.params.cityName;
+  
   City.findOneAndDelete({ name: cityName }, function (err, city) {
-    console.log(city);
+
   });
+
   response.end();
 });
 
