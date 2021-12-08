@@ -3,9 +3,9 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const City = require('../model/City');
 const urllib = require('urllib');
-// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/expense');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/city');
 
-mongoose.connect('mongodb://localhost/city', { useNewUrlParser: true });
+// mongoose.connect('mongodb://localhost/city', { useNewUrlParser: true });
 
 let API_KEY = 'b35017ebf137421ec453d05614795211';
 
