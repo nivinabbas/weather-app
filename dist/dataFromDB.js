@@ -4,7 +4,7 @@ class dataOfCity {
   }
 
   getDataFromDB = async function () {
-    this.dataOfCities = await $.get(`/cities/`);
+    this.dataOfCities = await $.get(`/cities`);
   };
 
   getDataFromDBAboutCity = async function (city) {
@@ -17,9 +17,7 @@ class dataOfCity {
   }
 
   deleteDataAboutCity = async function (cityToDelete) {
- 
     await axios.delete(`/city/${cityToDelete}`);
-   
   };
 
   getData = function () {
