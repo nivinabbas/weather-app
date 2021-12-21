@@ -8,16 +8,16 @@ class dataOfCity {
   };
 
   getDataFromDBAboutCity = async function (city) {
-    let newCity = await $.get(`/city/${city}`);
+    let newCity = await $.get(`/cities/${city}`);
     this.dataOfCities.push(newCity);
   };
 
   saveDataAboutCity(city) {
-    $.post('/city', city, function (res) {});
+    $.post('/cities', city, function (res) {});
   }
 
   deleteDataAboutCity = async function (cityToDelete) {
-    await axios.delete(`/city/${cityToDelete}`);
+    await axios.delete(`/cities/${cityToDelete}`);
   };
 
   getData = function () {
